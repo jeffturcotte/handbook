@@ -429,13 +429,17 @@ This is an example of default form markup.
 		<fieldset>
 			<h3>Fieldset Heading (don't use a legend)</h3>
 			<div class="text">
-				<label for="sample_form-text">Text<span class="required">*</span></label>
-				<input id="sample_form-text" type="text" />
+				<label>
+					Text<span class="required">*</span>
+					<input type="text" />
+				</label>
 				<span class="help">only numbers and letters</span>
 			</div>
 			<div class="password">
-				<label for="sample_form-password">Password<span class="required">*</span></label>
-				<input id="sample_form-password" type="password" />
+				<label>
+					Password<span class="required">*</span>
+					<input type="password" />
+				</label>
 			</div>
 		</fieldset>
 		
@@ -444,67 +448,87 @@ This is an example of default form markup.
 			<div class="radios group">
 				<label>Choose one</label>
 				<div class="radio">
-					<input id="sample_form-radio" type="radio" />
-					<label for="sample_form-radio">radio</label>
+					<label>
+						<input type="radio" />
+						radio 1
+					</label>
 				</div>
 				<div class="radio">
-					<input id="sample_form-radio_1" type="radio" />
-					<label for="sample_form-radio_1">radio 1</label>
+					<label>
+						<input type="radio" />
+						radio 2
+					</label>
 				</div>
 				<div class="radio">
-					<input id="sample_form-radio_2" type="radio" />
-					<label for="sample_form-radio_2">radio 2</label>
+					<label>
+						<input type="radio" />
+						radio 3
+					</label>
 				</div>
 			</div>
 			<div class="checkboxes group">
 				<label>Check all that apply</label>
 				<div class="checkbox">
-					<input id="sample_form-checkbox" type="checkbox" />
-					<label for="sample_form-checkbox">checkbox</label>
+					<label>
+						<input type="checkbox" />
+						checkbox 1
+					</label>
 				</div>
 				<div class="checkbox">
-					<input id="sample_form-checkbox_1" type="checkbox" />
-					<label for="sample_form-checkbox_1">checkbox 1</label>
+					<label>
+						<input type="checkbox" />
+						checkbox 2
+					</label>
 				</div>
 				<div class="checkbox">
-					<input id="sample_form-checkbox_2" type="checkbox" />
-					<label for="sample_form-checkbox_2">checkbox 2</label>
+					<label>
+						<input type="checkbox" />
+						checkbox 3
+					</label>
 				</div>
 			</div>
 			<div class="select">
-				<label for="sample_form-select">Select one</label>
-				<select id="sample_form-select">
-					<optgroup label="group">
-						<option value="option">Option</option>
-						<option value="option 1">option 1</option>
-						<option value="option 2" selected="selected">option 2</option>
-					</optgroup>
-					<optgroup label="group 1">
-						<option value="option 3">option 3</option>
-						<option value="option 4">option 4</option>
-						<option value="option 5">option 5</option>
-					</optgroup>
-				</select>
+				<label>
+					Select one
+					<select>
+						<optgroup label="group">
+							<option value="option">Option</option>
+							<option value="option 1">option 1</option>
+							<option value="option 2" selected="selected">option 2</option>
+						</optgroup>
+						<optgroup label="group 1">
+							<option value="option 3">option 3</option>
+							<option value="option 4">option 4</option>
+							<option value="option 5">option 5</option>
+						</optgroup>
+					</select>
+				</label>
 			</div>
 			<div class="select multiple">
-				<label for="sample_form-select_multiple">Select multiple</label>
-				<select id="sample_form-select_multiple" multiple="multiple" size="2">
-					<option value="option 6">option 6</option>
-					<option value="option 7">option 7</option>
-					<option value="option 8" selected="selected">option 8</option>
-				</select>
+				<label>
+					Select multiple
+					<select multiple="multiple" size="2">
+						<option value="option 6">option 6</option>
+						<option value="option 7">option 7</option>
+						<option value="option 8" selected="selected">option 8</option>
+					</select>
+				</label>
 			</div>
 		</fieldset>
 		
 		<fieldset>
 			<h3>Another Fieldset</h3>
 			<div class="textarea">
-				<label for="sample_form-textarea">Textarea</label>
-				<textarea id="sample_form-textarea" rows="20" cols="20">Textarea, 20 rows, 20 columns</textarea>
+				<label>
+					Textarea
+					<textarea rows="20" cols="20">Textarea, 20 rows, 20 columns</textarea>
+				</label>
 			</div>
 			<div class="file">
-				<label for="sample_form-file">Upload File</label>
-				<input type="file" id="sample_form-file" />
+				<label>
+					Upload File
+					<input type="file" />
+				</label>
 			</div>
 		</fieldset>
 		
@@ -526,10 +550,12 @@ This is an example of default form markup.
 ### Labels
 
 All appropriate input elements should have an associated label element. Labels
-should be associated directly with inputs.
+should be associated directly with inputs through nesting.
 
-	<label for="name">name</label>
-	<input id="name" type="text" />
+	<label>
+		name
+		<input id="name" type="text" />
+	</label>
 
 ## Tables
 
